@@ -28,7 +28,7 @@ export const parameters ={
   },
   buttonTitle:{
     color: 'white',
-    fontsize: 20,
+    fontSize: 20,
     fontweight: 'bold',
     alignItems: 'center',
     justifyContent: 'center',
