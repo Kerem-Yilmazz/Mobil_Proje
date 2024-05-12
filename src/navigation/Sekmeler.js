@@ -90,6 +90,7 @@ export default function RootClientTabs(){
                     }
                 }
             />
+            
         </Sekmeler.Navigator>
     )
 }

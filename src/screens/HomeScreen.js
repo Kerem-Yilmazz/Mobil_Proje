@@ -9,11 +9,11 @@ import HomeHeader from "../components/HomeHeader";
 import { colors,parameters } from "../global/styles";
 import {filterData,restaurantsData} from "../global/Data"
 import FoodCard from "../components/FoodCard";
-import { color } from "@rneui/base";
+
 
 const SCREEN_WIDTH = Dimensions.get("window").width
 
-export default function HomeScreen(){
+export default function HomeScreen({navigation}){
     
     const[delivery,setDelivery] = useState(true)
     const [indexCheck,setIndexCheck] = useState("0")
@@ -40,6 +40,7 @@ export default function HomeScreen(){
                     <TouchableOpacity
                         onPress={()=>{
                             setDelivery(false)
+                            navigation.navigate("RestorantHaritaEkrani")
                         }}
                          >
                         <View style ={{...styles.deliveryButton,backgroundColor:delivery?colors.grey5:colors.buttons}}>
@@ -198,6 +199,24 @@ export default function HomeScreen(){
          </View>
 
     </ScrollView>
+{delivery &&
+    <View style={styles.floatButton}>
+        <TouchableOpacity
+            onPress={()=>{
+                navigation.navigate("RestorantHaritaEkrani")
+            }}
+        >
+
+            <Icon
+                name ="place"
+                type="material"
+                size={32}
+                color={colors.buttons}
+            />
+            <Text style={{color:colors.grey2,fontSize:12}}>Harita</Text>
+        </TouchableOpacity>
+    </View>
+}
 </View>
     )
 }
@@ -278,6 +297,17 @@ const styles = StyleSheet.create({
      smallcardText: {
         fontWeight:"bold",
         color:colors.grey2,
+     },
+     floatButton:{
+        position:"absolute",
+        bottom:10,
+        right:15,
+        backgroundColor:"white",
+        elevation:10,
+        width:60,
+        height:60,
+        borderRadius:30,
+        alignItems:"center"
      },
      
 })

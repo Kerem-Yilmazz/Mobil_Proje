@@ -5,6 +5,7 @@ import SingInWelcomeScreen from "../screens/authScreens/SingInWelcomeScreen";
 import { SingInScreen } from "../screens/authScreens/SignInScreen";
 import HomeScreen from "../screens/HomeScreen";
 import RootClientTabs from "./Sekmeler";
+import RestorantHaritaEkrani from "../screens/RestorantHaritaEkrani";
 
 const Auth =createStackNavigator();
 
@@ -35,6 +36,16 @@ export default function AuthStack(){
             <Auth.Screen
                 name="RootClientTabs"
                 component ={RootClientTabs}
+                options ={{
+                    headerShown: false,
+                    ...TransitionPresets.RevealFromBottomAndroid
+                }
+                    
+                }
+            />
+            <Auth.Screen
+                name="RestorantHaritaEkrani"
+                component ={RestorantHaritaEkrani}
                 options ={{
                     headerShown: false,
                     ...TransitionPresets.RevealFromBottomAndroid
