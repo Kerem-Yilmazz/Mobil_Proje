@@ -1,5 +1,5 @@
 import React from "react";
-
+import { TouchableOpacity, Image } from 'react-native';
 import { View,Text,StyleSheet } from "react-native";
 import {Icon,withBadge} from "react-native-elements"
 

@@ -30,6 +30,7 @@ export default function HomeScreen({navigation}){
                     <TouchableOpacity
                         onPress={()=>{
                             setDelivery(true)
+                            navigation.navigate("RestorantHaritaEkrani")
                         }}
                          >
                         <View style ={{...styles.deliveryButton,backgroundColor:delivery?colors.buttons:colors.grey5}}>
