@@ -8,6 +8,9 @@ import Header from "../../components/Header";
 import {title} from "../../global/styles";
 
 
+
+
+
 export function SingInScreen({navigation}){
 
     const[textInput2Foussued,setTextInput2Fossued]=useState(false)
@@ -78,7 +81,9 @@ export function SingInScreen({navigation}){
                         title="Giriş Yap"
                         buttonStyle ={parameters.styledButton}
                         titleStyle ={parameters.buttonTitle}
-                            onPress={()=>{navigation.navigate("DrawerNavigator")}}
+                        onPress={() =>{
+                            navigation.navigate("RootClientTabs")
+                        }}
                     />
             </View>
             <View style={{alignItems:"center"}}>

@@ -6,7 +6,7 @@ import { SingInScreen } from "../screens/authScreens/SignInScreen";
 import HomeScreen from "../screens/HomeScreen";
 import RootClientTabs from "./Sekmeler";
 import RestorantHaritaEkrani from "../screens/RestorantHaritaEkrani";
-import DrawerNavigator from "../navigation/DrawerNavigator";
+
 
 const Auth =createStackNavigator();
 
@@ -35,8 +35,8 @@ export default function AuthStack(){
                 }
             />
             <Auth.Screen
-                name="DrawerNavigator"
-                component ={DrawerNavigator}
+                name="HomeScreen"
+                component ={HomeScreen}
                 options ={{
                     headerShown: false,
                     ...TransitionPresets.RevealFromBottomAndroid
