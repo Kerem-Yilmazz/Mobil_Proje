@@ -121,3 +121,49 @@ export const filterData = [
       id: 3},
     
 ]
+
+export const productData = [
+  {
+    name: "Hand cut chips",
+    price: 29.30,
+    image: "https://sanpagida.com.tr/wp-content/uploads/2021/09/patates-nasil-kizartilir-930x620.png",
+    details: "Two 100% fresh beef burger patties that are hot, deliciously",
+    id: 0
+  },
+  {
+    name: "Big Mac",
+    price: 50.80,
+    image: "https://www.sickchirpse.com/wp-content/uploads/2016/11/Big-Mac.jpg",
+    details: "McFeast features two 100% fresh beef burger patties that are hot",
+    id: 1
+  },
+  {
+    name: "Chicken Burger",
+    price: 70,
+    image: "https://www.qsrmagazine.com/wp-content/uploads/2019/07/flame-grilled-chicken-burger-ideal-burger-applications.jpg",
+    details: "",
+    id: 2
+  },
+  {
+    name: "Hand cut chips",
+    price: 29.30,
+    image: "https://cdn.yemek.com/mnresize/1250/833/uploads/2020/11/patates-cipsi-kossek.jpg",
+    details: "Two 100% fresh beef burger patties that are hot, deliciously",
+    id: 3
+  },
+  {
+    name: "Big Mac",
+    price: 70.20,
+    image: "https://www.sickchirpse.com/wp-content/uploads/2016/11/Big-Mac.jpg",
+    details: "McFeast features two 100% fresh beef burger patties that are hot",
+    id: 4
+  },
+  {
+    name: "Chicken Burger",
+    price: 70,
+    image: "https://www.qsrmagazine.com/wp-content/uploads/2019/07/flame-grilled-chicken-burger-ideal-burger-applications.jpg",
+    details: "",
+    id: 5
+  }
+];
+

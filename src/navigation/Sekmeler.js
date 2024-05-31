@@ -7,6 +7,7 @@ import HomeScreen from "../screens/HomeScreen";
 import AramaEkrani from "../screens/AramaEkrani";
 import SiparislerimEkrani from "../screens/SiparislerimEkrani";
 import HesabimEkrani from "../screens/HesabimEkrani";
+import { ClientStack } from "./clientStack";
 
 const Sekmeler = createBottomTabNavigator();
 
@@ -37,8 +38,8 @@ export default function RootClientTabs(){
             />
 
                 <Sekmeler.Screen
-                name ="AramaEkrani"
-                component={AramaEkrani}
+                name ="ClientStack"
+                component={ClientStack}
                 options={
                     {
                         tabBarLabel :"Arama",

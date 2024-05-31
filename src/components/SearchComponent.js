@@ -112,9 +112,9 @@ const handleSearch = text => {
                         renderItem={({ item }) => (
                             <TouchableOpacity
                                 onPress={() => {
-                                    navigation.navigate('RestaurantSearchScreen', { item: item.name });
+                                    navigation.navigate('SearchResultScreen', { item: item.name });
                                     Keyboard.dismiss();
-                                    setTextInputFocused(false);
+                                    setTextInputFoussed(false);
                                 }}
                             >
                                 <View style={styles.view2}>
