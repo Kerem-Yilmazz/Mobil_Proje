@@ -8,6 +8,19 @@ export const filterData = [
     {name : "Tatlı" ,image :require ("../resimler/tatlı.png") ,id :"6" }
   ];
 
+  export const filterData2 = [
+    { name: "Fast food", image: "https://www.partstown.com/about-us/wp-content/uploads/2023/11/what-is-considered-fast-food.jpg", id: "0" },
+    { name: "Burgers", image: "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/09/beef-burger.jpg", id: "1" },
+    { name: "Pizza", image: "https://cdn.yemek.com/mnresize/1250/833/uploads/2022/03/ev-usulu-pizza-yemekcom.jpg", id: "2" },
+    { name: "Kebap", image:"https://kebapcibey.com.tr/uploads/news/1524580446Kebap.png", id: "3" },
+    { name: "Döner", image: "https://images.deliveryhero.io/image/fd-tr/LH/jlks-listing.jpg", id: "4" },
+    { name: "Deniz Ürünleri", image:  "https://2.bp.blogspot.com/-FyyGUKavwgQ/Ts_yUkBQbKI/AAAAAAAAAHY/uYcBUs8i9Z4/s1600/DSC_0037i.jpg", id: "5" },
+    { name: "Salata", image: "https://i.pinimg.com/originals/8b/e6/f6/8be6f61f1669656a6307c5ac31e1367c.jpg", id: "6" },
+    { name: "Tatlı", image: "https://www.unileverfoodsolutions.com.tr/dam/global-ufs/mcos/TURKEY/calcmenu/recipes/TR-recipes/general/muhallebili-ekmek-kaday%C4%B1f%C4%B1/preview.jpg", id: "7" },
+    { name: "Ev Yemeği", image: "https://www.tazeyorum.com/images/show/reviews/place-33049/original/7b8cba09d158f251860459c5b6c7e32e.png", id: "8" },
+    { name: "Yabancı Mutfak", image: "https://wallpapers.com/images/hd/types-of-sushi-pictures-3840-x-2400-2zv0gjgbtvpbloeg.jpg", id: "9" }
+  ];
+  
 
   export const restaurantsData = [
     {
