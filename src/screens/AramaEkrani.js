@@ -10,9 +10,9 @@ import { colors } from "../global/styles";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
-export default function AramaEkrani({ navigation }) {
+export default function AramaEkrani({ navigation,}) {
     return (
-        <View style={{ marginBottom: 10 }}>
+        <View style={{ marginBottom: 10,paddingTop:20 }}>
             <SearchComponent />
 
             <View style={{ marginTop: 10 }}>

@@ -9,6 +9,7 @@ import RootNavigator from "./src/navigation/RootNavigator"
 
 
 
+
 export default function App(){
   return(
     <View style ={styles.container}>
