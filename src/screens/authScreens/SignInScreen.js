@@ -1,10 +1,12 @@
 import React,{useState,useRef} from "react";
-import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity,TextInput} from "react-native";
+import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity,TextInput, Alert} from "react-native";
 import { colors, parameters } from "../../global/styles";
 import * as Animatable from 'react-native-animatable';
 
 import { Icon,Button,SocialIcon } from "react-native-elements";
+import { Formik } from "formik";
 import Header from "../../components/Header";
+import auth from "@react-native-firebase/auth"
 import {title} from "../../global/styles";
 
 
@@ -17,8 +19,27 @@ export function SingInScreen({navigation}){
     const textInput1 =useRef(1)
     const textInput2 =useRef(2)
 
+    async function singIn(data){
+        try{
+        const {password,email} = data
+        const user = await auth().signInWithEmailAndPassword(email,password)
+        if(user){
+            console.log("USER SIGNED-IN")
+        }
+    }
+        catch(error){
+            Alert.alert(
+                error.name,
+                error.message
+            )
+            
+        }
+    }
+
     return(
         <View styles = {styles.container}>
+            
+            
             <Header title="Hesabım" navigation={navigation}/>
 
             <View style ={{marginLeft:20, marginTop:10}}>
@@ -29,12 +50,23 @@ export function SingInScreen({navigation}){
                 <Text style={styles.text1}>Lütfen kayıt olduğunuz</Text>
                 <Text style={styles.text1}>e-mail ve şifrenizi giriniz.</Text>
             </View>
-            <View style={{marginTop:20}}>
+            <Formik
+                initialValues={{email:"",password:""}}
+                onSubmit={(values)=>{
+                    singIn(values)
+                }}
+
+            >
+                {(props) =>
+                    <View>
+                <View style={{marginTop:20}}>
                 <View>
                     <TextInput
                         style={styles.TextInput1}
                         placeholder="E-mail"
                         ref={textInput1}
+                        onChangeText={props.handleChange("email")}
+                        value={props.values.email}
                     />
                 </View>
             </View>
@@ -62,6 +94,8 @@ export function SingInScreen({navigation}){
                         onBlur={()=>{
                             setTextInput2Fossued(true)
                         }}
+                        onChangeText={props.handleChange("password")}
+                        value = {props.values.password}
                     />
                 <Animatable.View animation={textInput2Foussued?"":"fadeInLeft"} duration={400}>
                     <Icon
@@ -81,11 +115,16 @@ export function SingInScreen({navigation}){
                         title="Giriş Yap"
                         buttonStyle ={parameters.styledButton}
                         titleStyle ={parameters.buttonTitle}
-                        onPress={() =>{
-                            navigation.navigate("RootClientTabs")
-                        }}
+                        onPress={props.handleSubmit}
                     />
             </View>
+            </View>
+            }
+            </Formik>
+
+
+
+            
             <View style={{alignItems:"center"}}>
                 <Text style={{...styles.text1,textDecorationLine:"underline"}}>Şifremi Unuttun ?</Text>
             </View>
