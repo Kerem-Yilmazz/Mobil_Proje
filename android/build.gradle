@@ -6,16 +6,38 @@ buildscript {
         targetSdkVersion = 34
         ndkVersion = "25.1.8937393"
         kotlinVersion = "1.8.0"
+        ndkVersion ="20.1.594844"
+        supportLibVersion="29.0.2"
+        playServicesVersion="17.0.0"
+        androidMapUtilsVersion="1.2.1"
     }
     repositories {
         google()
+        jcenter()
         mavenCentral()
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+        classpath("com.google.gms:google-services:4.3.5")
+         // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-auth")
     }
+    plugins {
+  id 'com.android.application'
+
+  // Add the Google services Gradle plugin
+  id 'com.google.gms.google-services'
+
+  ...
+}
+
+
 }
 
 apply plugin: "com.facebook.react.rootproject"
