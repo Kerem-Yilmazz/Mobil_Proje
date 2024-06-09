@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { colors } from "react-native-elements";
-import { Icon } from "react-native-elements"; // Hatalı olan import düzeltildi
+import { Icon } from "react-native-elements"; 
 import { specialData, menuData ,} from "../../global/Data";
 
 const MenuScreen = ({ navigation, restaurant,onPress }) => {
